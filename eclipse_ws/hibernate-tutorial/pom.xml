@@ -4,11 +4,10 @@
   <groupId>org.hibernate.tutorial</groupId>
   <artifactId>hibernate-tutorial</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>hibernate-tutorial JEE5 Webapp</name>
+  <version>1.0-SNAPSHOT</version>
+  <name>hibernate-tutorial Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-
     <!-- Because this is a web app, we also have a dependency on the servlet api. -->
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -16,14 +15,12 @@
       <version>2.5</version>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
       <version>2.1</version>
       <scope>provided</scope>
     </dependency>
-    
     <dependency>
     	<groupId>org.hibernate</groupId>
     	<artifactId>hibernate-core</artifactId>
@@ -31,16 +28,6 @@
     	<type>jar</type>
     	<scope>compile</scope>
     </dependency>
-    
-    <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
-    <dependency>
-    	<groupId>org.slf4j</groupId>
-    	<artifactId>slf4j-simple</artifactId>
-    	<version>1.5.5</version>
-    	<type>jar</type>
-    	<scope>compile</scope>
-    </dependency>
-    
     <!-- Hibernate gives you a choice of bytecode providers between cglib and javassist -->
     <dependency>
     	<groupId>javassist</groupId>
@@ -49,18 +36,31 @@
     	<type>jar</type>
     	<scope>compile</scope>
     </dependency>
-
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
     <dependency>
     	<groupId>mysql</groupId>
     	<artifactId>mysql-connector-java</artifactId>
     	<version>5.1.13</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-api</artifactId>
+    	<version>1.6.1</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
+    <!-- Hibernate uses slf4j for logging, for our purposes here use the simple backend -->
+    <dependency>
+    	<groupId>org.slf4j</groupId>
+    	<artifactId>slf4j-simple</artifactId>
+    	<version>1.6.1</version>
     	<type>jar</type>
     	<scope>compile</scope>
     </dependency>
@@ -76,6 +76,13 @@
           <target>1.5</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+          <downloadSources>true</downloadSources>
+        </configuration>
+      </plugin>
     </plugins>
     <finalName>hibernate-tutorial</finalName>
   </build>
@@ -85,4 +92,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
+  
+  
 </project>
