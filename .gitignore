@@ -1,1 +1,3 @@
 eclipse_ws/.metadata
+eclipse_ws/*/.*
+eclipse_ws/*/target
