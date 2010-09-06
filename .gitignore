@@ -1,3 +1,4 @@
 eclipse_ws/.metadata
+eclipse_ws/Servers
 eclipse_ws/*/.*
 eclipse_ws/*/target
