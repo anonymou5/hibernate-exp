@@ -1,0 +1,4 @@
+= IMPORTANT NOTES =
+- Use Eclipse with "Eclipse IAM" for Maven, NOT m2eclipse. m2eclipse failed
+miserably when it came to simply running code, it would not properly run
+"mvn compile" behind the scenes.
